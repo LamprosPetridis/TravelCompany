@@ -4,6 +4,7 @@ import gr.codehub.eshop.model.Account;
 import gr.codehub.eshop.model.Customer;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Bank {
@@ -58,6 +59,24 @@ public class Bank {
         System.out.println("Customer name "+ account.getCustomer().getName());
         System.out.println("Balance "+ account.getBalance().add( new BigDecimal("-20"))  );
         System.out.println("Date = "+dateStamp);
+    }
+
+
+    public void manyTransactions(){
+        //Customer [] customers  = new Customer[20]; //array
+        ArrayList<Customer> customers = new ArrayList<>();
+        customers.add(new Customer());
+        customers.add(new Customer(3,"Aris","Athina",
+                new Date(100,2,15),0,true));
+
+        /*for(int index = 0;index < customers.size();index++){
+            System.out.println(customers.get(index));
+        }
+        System.out.println(customers.get(1));*/
+
+        for(Customer customer: customers){
+            System.out.println(customer);
+        }
     }
 
 }
